@@ -14,5 +14,4 @@
 
 ### Other Parameters:
 
-		-h, --help : display this usage information
-
+    -h, --help : display this usage information

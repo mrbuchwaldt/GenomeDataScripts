@@ -10,7 +10,7 @@ main();
 sub main
 {
 	my $options = {};
-	my $command_line = join(" ", ('SCRIPTNAME', @ARGV));
+	my $command_line = join(" ", ('gff_to_feature_density_bedgraph.pl', @ARGV));
 
 	GetOptions($options, 'gff_file|g=s', 'tag|t=s', 'window|w=i', 'help|h');
 	print STDERR keys(%$options) if( keys(%$options) != 3 );
@@ -87,17 +87,17 @@ sub usage
   
   my $usage .= <<__HERE__;
 
-    Required Parameters:
+  Required Parameters:
 
     -g, --gff-file : filename for the gff3 containing features
     -t, --tag : the tag for the feature to use when calculating density
     -w, --window: the size of windows to calculate feature density
 
-		Other Parameters:
+  Other Parameters:
 
-		-h, --help : display this usage information
+    -h, --help : display this usage information
 
-    Your command:
+  Your command:
 
     $command
 

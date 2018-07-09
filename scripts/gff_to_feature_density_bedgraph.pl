@@ -27,6 +27,7 @@ sub main
 	while( <GFF> ){
 	
 		chomp($_);
+		next if( $_ =~ /^#.*$/ );
 	
 		#extract fields from each line of GFF3
 		my ($chr, $source, $tag, $start, $end, $tr, $strand, $score, $notes) = split("\t", $_);
